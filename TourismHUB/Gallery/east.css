@@ -1,0 +1,63 @@
+body {
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #191919;
+}
+
+h1 {
+    font-size: 20px;
+    color: white;
+    margin: 20px 0 20px 0;
+    font-size: 60px;
+    font-weight: 700;
+    text-shadow: 2px 1px 5px black;
+}
+
+input {
+    display: none;
+}
+
+.tag {
+    font-size: 20px;
+    margin: 1.5em 0px;
+    padding: 5px 25px;
+    border-radius: 50px;
+    display: inline-block;
+    cursor: pointer;
+    background: #efefef;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #ccc;
+}
+
+img {
+    border-radius: 10px;
+    max-width: 300px;
+    width: 100%;
+    height: 40%;
+    transition: transform .3s;
+}
+
+img:hover {
+    transform: scale(1.2);
+}
+
+
+/*filter CSS */
+
+#Odisha:checked~.images>img:not([class*='Odisha']),
+#Kolkata:checked~.images>img:not([class*='Kolkata']),
+#Darjeeling:checked~.images>img:not([class*='Darjeeling']),
+#Sikkim:checked~.images>img:not([class*='Sikkim']) {
+    width: 0px;
+    height: 0px;
+}
+
+#All:checked~.All,
+#Odisha:checked~.tag1,
+#Kolkata:checked~.tag2,
+#Darjeeling:checked~.tag3,
+#Sikkim:checked~.tag4 {
+    background-color: #80daeb;
+    color: white;
+}
